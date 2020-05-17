@@ -20,7 +20,10 @@ export const Login = () => {
   const formSubmit = (event) => {
     event.preventDefault()
     const users = getLocalstorage('users')
-    const sameEmail = users.find(item => item.email === email)
+    let sameEmail = null
+    if (users) {
+      sameEmail = users.find(item => item.email === email)
+    }
     if (sameEmail) {
       if (sameEmail.password === password && sameEmail.email === email) {
         dispatch(userLogin({email, name: sameEmail.name}))

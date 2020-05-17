@@ -32,7 +32,10 @@ export const Register = () => {
       return false
     }
     const users = getLocalstorage('users')
-    const findSameEmail = users.find(item => item.email === email)
+    let findSameEmail = null
+    if (users) {
+      findSameEmail = users.find(item => item.email === email)
+    }
     if (findSameEmail) {
       setError('Such user already exists')
       setLoading(false)
