@@ -1,0 +1,15 @@
+{
+    "extends": ["react-app", "eslint:recommended"],
+    "rules": {
+        "quotes": ["warn", "single"],
+        "semi": ["warn", "never"],
+        "indent": ["error", 2]
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    }
+}

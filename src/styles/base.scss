@@ -1,0 +1,43 @@
+@import "../../node_modules/bootstrap/scss/mixins";
+
+html {
+  @include media-breakpoint-down(lg) {
+    font-size: 16px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 12px;
+  }
+}
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+}
+.app {
+  background-image: url('../images/bg2.jpg');
+  min-height: 100vh;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.text-container {
+  margin-bottom: 1.5rem;
+  &__paragraph {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.page-title {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+.page-sub-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}

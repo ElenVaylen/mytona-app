@@ -1,0 +1,7 @@
+@import "../../styles/variables";
+
+.error {
+  &__message {
+    color: $red;
+  }
+}

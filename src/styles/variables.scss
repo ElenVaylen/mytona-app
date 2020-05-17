@@ -1,0 +1,57 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+//bootstrap
+$body-bg:  $white;
+$body-color: $gray-800;
+$font-family-sans-serif: 'Muli', sans-serif;
+$font-family-base: $font-family-sans-serif;
+$font-size-base: 18px;
+$form-grid-gutter-width: 1.5rem;
+$grid-gutter-width: 1.9rem;
+
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+
+$dark-color: #32353e;
+$focus: #17a2b817;
+
+$primary:       $dark-color;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-800;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+$component-active-bg: $info;
+$link-color: $info;
+$custom-control-indicator-checked-disabled-bg:  rgba($info, .5);
+$input-focus-border-color: lighten($info, 25%);
+$input-btn-focus-width: .1rem;
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $focus;
+$input-focus-box-shadow: $input-btn-focus-box-shadow;

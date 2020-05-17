@@ -1,0 +1,55 @@
+@import '../../styles/variables';
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+.news-list {
+  &__item {
+    margin-bottom: 2rem;
+    &-wrap {
+    }
+    &-left {
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
+    }
+    &-img {
+      width: 220px;
+      height: 150px;
+      position: relative;
+      overflow: hidden;
+      @include media-breakpoint-down(md) {
+        width: 180px;
+        height: 120px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 140px;
+        height: 100px;
+      }
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        right: 0;
+        max-width: 135%;
+        transform: translateX(-50%) translateY(-50%);
+        min-height: 100%;
+      }
+    }
+    &-date {
+      margin-bottom: 0;
+      color: $gray-600;
+      font-size: 0.9rem;
+    }
+    &-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0.8rem 0;
+    }
+    &-desc {
+      margin-bottom: 0.5rem;
+    }
+    &-source {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+  }
+}

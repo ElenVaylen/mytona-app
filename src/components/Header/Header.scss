@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+.header {
+  background-color: $primary;
+  color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  &__wrap {
+    height: 60px;
+    @include media-breakpoint-down(md) {
+      height: 40px;
+    }
+  }
+  &__link {
+    color: $white;
+    margin-left: 26px;
+    &-left {
+      margin-left: 0;
+    }
+    &.active {
+      text-decoration: underline;
+    }
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}

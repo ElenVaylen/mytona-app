@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+.content-bg {
+  padding-top: 60px;
+  @include media-breakpoint-down(md) {
+    padding-top: 40px;
+  }
+  &__wrap {
+    background-color: #fffffff7;
+    padding: 50px 46px;
+    min-height: calc(100vh - 60px);
+    @include media-breakpoint-down(md) {
+      min-height: calc(100vh - 40px);
+    }
+    @include media-breakpoint-down(md) {
+      padding: 40px 36px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 30px 24px;
+    }
+  }
+}
